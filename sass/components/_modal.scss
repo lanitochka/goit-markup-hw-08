@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    
+    overflow-y: auto;    
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -14,22 +14,29 @@
         pointer-events: none;
         
         .modal {
-            transform: translate(-50%, -50%) scale(0.8);
+            // transform: translate(-50%, -50%) scale(0.8);
+            transform: translateY(50%) scale(0.8);
         }
     }
 }
 
+.modal-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .modal {
+    margin: 20px;
     padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
     
     background: $alternative-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;   
-
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateY(50%) scale(1);
+    // transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -126,8 +133,8 @@
             display: inline-block;
             content: "";
             margin-right: 8px;
-            Width: 16px;    
-            Height: 15px;
+            width: 16px;    
+            height: 15px;
             border: 2px solid #212121;
             border-radius: 2px;
         } 
@@ -148,8 +155,33 @@
     background-position: center;
 }
 
+@media screen and (max-width: 767px) {
+    .modal-form {
+        .policy {
+            display: inline;
+        }
+        p {
+            text-align: left !important;
+        }
+    }
+
+    .backdrop {
+        
+        &.is-hidden {
+            .modal {
+                transform: translateY(0%) scale(0.8);
+            }
+        }
+    }
+
+    .modal {
+        transform: translateY(0%) scale(1);
+    }
+}
+
 @media screen and (max-width: 1199px) {
     .modal {
+        max-width: 90%;
         width: 450px;
         height: 609px;
     }
@@ -158,6 +190,19 @@
         .policy {
             font-size: 12px;
         }
+    }
+
+    .backdrop {
+        
+        &.is-hidden {
+            .modal {
+                transform: translateY(10%) scale(0.8);
+            }
+        }
+    }
+
+    .modal {
+        transform: translateY(10%) scale(1);
     }
 }
 

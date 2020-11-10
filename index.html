@@ -19,14 +19,14 @@
                 <a class="logo link" href="./index.html" aria-label="логотип вебстудии">
                     <span class="logo-accent">Web</span>Studio
                 </a>
-                <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="mobile-menu" data-menu-button="">
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button="">
                     <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
                         <use class="icon-cross" href="./images/sprite.svg#cross" ></use>
                         <use class="icon-menu" href="./images/sprite.svg#menu" ></use>
                     </svg>
                 </button>
 
-                <div class="mobile-menu is-open" id="mobile-menu" data-menu="">
+                <div class="mobile-menu" id="mobile-menu" data-menu="">
                     <ul class="navigation-list list">
                         <li class="navigation-list-item">
                             <a class="navigation-list-link current link" href="./index.html">Студия</a>
@@ -469,62 +469,64 @@
 
 
     <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-            <button type="button" class="close-btn" data-modal-close>
-                <svg width="11px" height="11px" >
-                    <use href="./images/sprite.svg#icon-close" ></use>
-                </svg>
-            </button>
+        <div class="modal-wrapper">
+            <div class="modal">
+                <button type="button" class="close-btn" data-modal-close>
+                    <svg width="11px" height="11px" >
+                        <use href="./images/sprite.svg#icon-close" ></use>
+                    </svg>
+                </button>
 
-                <form action="#" class="modal-form">
-                    <h3 class="text-center" >Оставьте свои данные, мы вам перезвоним</h3>
-                    <p>
-                        <label for="name">Имя</label>
-                        <span>
-                            <input type="text" class="form-input" name="name" id="name" required/>
-                            <svg width="12" height="12">
-                                <use href="./images/sprite.svg#name" ></use>
-                            </svg>
-                        </span>
-                    </p>
+                    <form action="#" class="modal-form">
+                        <h3 class="text-center" >Оставьте свои данные, мы вам перезвоним</h3>
+                        <p>
+                            <label for="name">Имя</label>
+                            <span>
+                                <input type="text" class="form-input" name="name" id="name" required/>
+                                <svg width="12" height="12">
+                                    <use href="./images/sprite.svg#name" ></use>
+                                </svg>
+                            </span>
+                        </p>
 
-                    <p>
-                        <label for="tel">Телефон</label>
-                        <span>
-                            <input type="tel" class="form-input" name="tel" id="tel" required/>
-                            <svg width="13" height="13">
-                                <use href="./images/sprite.svg#phone" ></use>
-                            </svg>
-                        </span>
-                    </p>
+                        <p>
+                            <label for="tel">Телефон</label>
+                            <span>
+                                <input type="tel" class="form-input" name="tel" id="tel" required/>
+                                <svg width="13" height="13">
+                                    <use href="./images/sprite.svg#phone" ></use>
+                                </svg>
+                            </span>
+                        </p>
 
-                    <p>
-                        <label for="email">Почта</label>
-                        <span>
-                            <input type="email" class="form-input" name="email" id="email" required/>
-                            <svg width="15" height="12">
-                                <use href="./images/sprite.svg#email" ></use>
-                            </svg>
-                        </span>
+                        <p>
+                            <label for="email">Почта</label>
+                            <span>
+                                <input type="email" class="form-input" name="email" id="email" required/>
+                                <svg width="15" height="12">
+                                    <use href="./images/sprite.svg#email" ></use>
+                                </svg>
+                            </span>
 
-                    </p>    
-                    
-                    <p>
-                        <label for="message">Комментарий</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Введите текст" class="form-input"></textarea>
-                    </p>
+                        </p>    
+                        
+                        <p>
+                            <label for="message">Комментарий</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Введите текст" class="form-input"></textarea>
+                        </p>
 
-                    <p class="text-center">
-                        <input type="checkbox" name="policy" value="" id="privacy" class="checkbox visually-hidden"> 
-                        <label for="privacy" class="policy" >Соглашаюсь с рассылкой и принимаю &nbsp;<a href="#">Условия договора</a></label>                        
-                    </p>
+                        <p class="text-center">
+                            <input type="checkbox" name="policy" value="" id="privacy" class="checkbox visually-hidden"> 
+                            <label for="privacy" class="policy" >Соглашаюсь с рассылкой и принимаю &nbsp;<a href="#">Условия договора</a></label>                        
+                        </p>
 
-                    <button class="modal-btn" type="submit">Отправить</button>                  
+                        <button class="modal-btn" type="submit">Отправить</button>                  
 
-                    
-                </form>
+                        
+                    </form>
+            </div>
         </div>
-
+        
     </div>
 
     <script src="./js/modal.js" ></script>
