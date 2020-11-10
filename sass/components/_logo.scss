@@ -1,0 +1,15 @@
+.logo {
+    // margin-right: 93px;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: #000000;
+
+    &-accent {
+        color: $accent-color;
+    }
+}
+

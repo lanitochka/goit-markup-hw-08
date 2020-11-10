@@ -1,0 +1,312 @@
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $background-color;
+
+    .logo {
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-right: 0px;
+        color: $alternative-color;
+    }
+    
+    .social-icons {
+   
+        li:not(:last-child) {
+            margin-right: 10px;
+        }
+        
+        a {
+            background-color: rgba(255, 255, 255, 0.1);
+        
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        svg {
+            fill: $alternative-color;
+        }
+    }
+    
+    h4 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $alternative-color;
+    }
+}
+
+address {
+    font-style: normal;
+}
+
+.contacts-footer {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;    
+    
+    a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+    
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    li:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    
+    .link-white {
+        color: $alternative-color;  
+    }
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+    > div {
+        margin-bottom: 60px;
+        flex-basis: 100%;
+
+        // &:last-child {
+        //     flex-basis: 50%;
+        // }
+    }  
+    
+    .subscribe-input {
+        padding-left: 16px;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: transparent;
+        /* box-sizing: border-box; */
+        color: rgba(255, 255, 255, 0.6);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+    }
+    
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .modal-btn {
+        display: flex;
+        align-items: center;
+        // margin-left: 12px;
+        flex-shrink: 0;
+        
+        svg {
+            margin-left: 10px;
+            fill: $alternative-color;
+        }
+    }
+}
+
+.subscribe-input {
+    &:focus {
+        outline: none;
+        border: 1px solid $accent-color;
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    footer {
+        h4 {
+            margin-top: 10px;
+        }
+    }
+
+    .footer-columns {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        > div {
+            flex-basis: calc((100% - 30px)/2);
+
+            &:last-child {                
+                flex-grow: 2;
+            }
+        }
+
+        form {
+            max-width: 65%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    footer {
+        .social-icons {
+            justify-content: flex-start;
+            margin: 0;
+        }
+    }
+
+    .footer-columns {
+        text-align: left;
+        align-items: baseline;
+
+        > div {
+            flex-basis: 25%;
+
+            &:last-child {
+                flex-basis: 50%;
+            }
+
+            .modal-btn {
+                margin-left: 12px;
+            }
+        }  
+
+        form {
+            max-width: 100%;
+            flex-wrap: nowrap;
+            margin: 0;
+        }
+
+        .subscribe-input {
+            margin-bottom: 0;
+        }        
+    }
+}
+
+
+
+
+
+
+
+// footer {
+//     padding-top: 60px;
+//     padding-bottom: 60px;
+//     background-color: $background-color;
+
+//     .logo {
+//         display: inline-block;
+//         margin-bottom: 20px;
+//         margin-right: 0px;
+//         color: $alternative-color;
+//     }
+    
+//     .social-icons {
+//         justify-content: flex-start;
+        
+//         li:not(:last-child) {
+//             margin-right: 10px;
+//         }
+        
+//         a {
+//             background-color: rgba(255, 255, 255, 0.1);
+        
+//             transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//         }
+        
+//         svg {
+//             fill: $alternative-color;
+//         }
+//     }
+    
+//     h4 {
+//         margin-bottom: 20px;
+//         font-weight: 700;
+//         font-size: 14px;
+//         line-height: 1.143;
+//         letter-spacing: 0.03em;
+//         text-transform: uppercase;
+//         color: $alternative-color;
+//     }
+// }
+
+// address {
+//     font-style: normal;
+// }
+
+// .contacts-footer {
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 1.714;
+//     letter-spacing: 0.03em;
+    
+//     a {
+//         color: rgba(255, 255, 255, 0.6);
+//         text-decoration: none;
+    
+//         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//     }
+    
+//         li:not(:last-child) {
+//         margin-bottom: 9px;
+//     }
+    
+//     .link-white {
+//         color: $alternative-color;  
+//     }
+// }
+
+// .footer-columns {
+//     display: flex;
+//     align-items: baseline;
+
+//     > div {
+//         flex-basis: 25%;
+
+//         &:last-child {
+//             flex-basis: 50%;
+//         }
+//     }  
+    
+//     .subscribe-input {
+//         padding-left: 16px;
+//         width: 100%;
+//         height: 50px;
+//         border: 1px solid rgba(255, 255, 255, 0.3);
+//         background-color: transparent;
+//         /* box-sizing: border-box; */
+//         color: rgba(255, 255, 255, 0.6);
+//         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//         border-radius: 4px;
+//     }
+    
+//     form {
+//         display: flex;
+//     }
+    
+//     .modal-btn {
+//         display: flex;
+//         align-items: center;
+//         margin-left: 12px;
+//         flex-shrink: 0;
+        
+//         svg {
+//             margin-left: 10px;
+//             fill: $alternative-color;
+//         }
+//     }
+// }
+
+// .subscribe-input {
+//     &:focus {
+//         outline: none;
+//         border: 1px solid $accent-color;
+//         transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//     }
+    
+//     &::placeholder {
+//         color: rgba(255, 255, 255, 0.6);
+//     }
+// }

@@ -1,0 +1,171 @@
+.privilege {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.our-privilege {
+    display: flex;
+    flex-wrap: wrap;
+    
+    li {
+        flex-basis: 100%;
+        
+        &::before {
+            display: block;
+            content: "";
+            background-color: $alternative-background-color;
+            height: 120px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            /* background-size: contain; */
+            background-size: 70px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }   
+        
+        &:nth-child(1)::before {
+            background-image: url(../images/svg/antenna_1.svg);
+        }
+        
+        &:nth-child(2)::before {
+            background-image: url(../images/svg/clock_1.svg);
+        }
+        
+        &:nth-child(3)::before {
+            background-image: url(../images/svg/diagram_1.svg);
+        }
+        
+        &:nth-child(4)::before {
+        background-image: url(../images/svg/astronaut_1.svg);
+        }
+
+        margin-bottom: 30px;
+    }
+    
+    h3 {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+    
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.714;
+        letter-spacing: 0.03em;
+    }  
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .our-privilege {
+
+        h3 {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .our-privilege {
+        justify-content: space-between;  
+        // margin: -15px;      
+
+        li {
+            // flex-basis: calc((100% - 4*15px)/2);
+            flex-basis: calc((100% - 2*15px)/2);
+            // margin: 15px;    
+
+        }
+    }     
+}
+
+@media screen and (min-width: 1200px) {
+    .privilege {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    .our-privilege {
+        li {
+            margin-bottom: 0;
+            flex-basis: calc((100% - 3*30px)/4);
+            
+            &:not(:last-child) {
+            margin-right: 30px;
+            }            
+        }
+    } 
+}
+
+
+
+
+
+
+
+
+// .privilege {
+//     padding-top: 94px;
+//     padding-bottom: 94px;
+// }
+
+// .our-privilege {
+//     display: flex;
+    
+//     li {
+//         flex-basis: 25%;
+        
+//         &::before {
+//             display: block;
+//             content: "";
+//             background-color: $alternative-background-color;
+//             height: 120px;
+//             border-radius: 4px;
+//             margin-bottom: 30px;
+//             /* background-size: contain; */
+//             background-size: 70px;
+//             background-repeat: no-repeat;
+//             background-position: center;
+//         }   
+        
+//         &:nth-child(1)::before {
+//             background-image: url(../images/svg/antenna_1.svg);
+//         }
+        
+//         &:nth-child(2)::before {
+//             background-image: url(../images/svg/clock_1.svg);
+//         }
+        
+//         &:nth-child(3)::before {
+//             background-image: url(../images/svg/diagram_1.svg);
+//         }
+        
+//         &:nth-child(4)::before {
+//         background-image: url(../images/svg/astronaut_1.svg);
+//         }
+//         /* либо каждому li присвоить класс */
+        
+//         &:not(:last-child) {
+//             margin-right: 30px;
+//         }
+//     }
+    
+//     h3 {
+//         margin-bottom: 10px;
+//         font-weight: 700;
+//         font-size: 14px;
+//         line-height: 1.143;
+//         letter-spacing: 0.03em;
+//         text-transform: uppercase;
+//     }
+    
+//     p {
+//         font-weight: 400;
+//         font-size: 14px;
+//         line-height: 1.714;
+//         letter-spacing: 0.03em;
+//     }  
+// }
